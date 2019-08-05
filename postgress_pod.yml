@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: postgress_pod
+  labels:
+    name: postgress_pod
+    app: voting_app
+spec:
+  containers:
+    - name: postgress
+      image: postgress:9.4
+      ports:
+      - containerPort: 5432
